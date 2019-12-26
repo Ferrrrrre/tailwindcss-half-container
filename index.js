@@ -31,8 +31,10 @@ module.exports = function(options) {
       const unit = strip(minWidth);
       return {
         [`@media (min-width: ${minWidth})`]: {
-          '.half-container': {
-            'max-width': `${parseInt(minWidth, 10) / 2}${unit}`,
+          '@variants responsive': {
+            '.half-container': {
+              'max-width': `${parseInt(minWidth, 10) / 2}${unit}`,
+            },
           },
         },
       }
