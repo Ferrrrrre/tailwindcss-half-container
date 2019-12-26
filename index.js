@@ -30,8 +30,8 @@ module.exports = function(options) {
     const atRules = _.map(minWidths, minWidth => {
       const unit = strip(minWidth);
       return {
-        [`@media (min-width: ${minWidth})`]: {
-          '@variants responsive': {
+        '@variants responsive': {
+          [`@media (min-width: ${minWidth})`]: {
             '.half-container': {
               'max-width': `${parseInt(minWidth, 10) / 2}${unit}`,
             },
